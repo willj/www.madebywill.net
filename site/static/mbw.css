@@ -1,0 +1,156 @@
+body{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #333333;
+}
+
+div, header, main, article{
+    position: relative;
+    display: block;
+}
+
+ul,ol{
+    padding-left: 20px;
+}
+
+.header-wrapper{
+    margin: 0 auto 60px auto;
+}
+
+.header-nav{
+    background-color: #333333;
+    width: 100%;
+    text-align: center;
+}
+
+.header-nav a{
+    display: inline-block;
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Quicksand';
+}
+
+.header-nav a:hover{
+    background-color: #cecece;
+    color: #333333;
+}
+
+.site-header{
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
+
+.site-title{
+    font-size: 1.5em;
+    line-height: 1em;
+    padding: 20px;
+    font-family: 'Quicksand';
+    display: inline-block;
+}
+
+.site-title span{
+    font-weight: normal;
+}
+
+.header-icon{
+    text-decoration: none;
+    display: block;
+    margin: 35px 20px 0 0;
+    float:right;
+}
+
+.icon-github{
+    width: 24px;
+    height: 24px;
+    fill: #333333;
+}
+
+.icon-twitter{
+    width: 24px;
+    height: 24px;
+    fill: #333333;
+}
+
+.header-icon:hover svg{
+    fill: #06adda;
+}
+
+main{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+}
+
+.post{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.post a{
+    display: block;
+    text-decoration: none;
+    color:#333333;
+}
+
+.post a:hover{
+    background-image: url('images/fwdarrow.png');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+.post-title{
+    background-color: #06adda;
+    color: #ffffff;
+    padding:20px 20px;
+    font-weight: lighter;
+    font-size: 2.2em;
+    line-height: 1em;
+    margin: 20px 0;
+}
+
+.post-body{
+    box-sizing: border-box;
+    max-width: 550px;
+    margin: 0 20px;
+    line-height: 1.5em;
+    min-height: 100px;
+}
+
+.post-read-more{
+    font-weight: bold;
+    text-decoration: none;
+    color: #06adda;
+}
+
+.post-read-more:hover{
+    text-decoration: underline;
+    color: #007AA7;
+}
+
+.paging{
+    text-align: center;
+    border-top:2px dotted #cecece;
+    font-family: 'Quicksand';
+}
+
+.paging a{
+    display: inline-block;
+    color: #333333;
+    padding:5px;
+    text-decoration: none;
+    margin:5px;
+}
+
+.paging a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width:700px) {
+    .post a:hover{
+        background-image: none;
+    }
+}

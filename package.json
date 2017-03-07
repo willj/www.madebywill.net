@@ -1,0 +1,14 @@
+{
+  "name": "willjstatic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "willj",
+  "license": "ISC",
+  "devDependencies": {
+    "willj-noodle": "^1.0.0-alpha.2"
+  }
+}

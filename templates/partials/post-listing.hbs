@@ -1,0 +1,28 @@
+{{#each posts}}
+  <article class="post">
+      <a href="{{ fileDestination.permalink }}">
+          <h2 class="post-title">{{ attributes.title }}</h2>
+
+          <div class="post-body">
+              {{#if attributes.excerptHtml }}
+                {{{ attributes.excerptHtml }}}
+              {{/if}}
+              {{#if attributes.excerpt }}
+                <p>{{ attributes.excerpt }}</p>
+              {{/if}}
+
+              <span class="post-read-more">Read more</span>
+          </div>
+      </a>
+  </article>
+{{/each}}
+
+<nav class="paging">
+  {{#if paging.previous}}
+    <a href="{{paging.previous}}">< Newer posts</a>
+  {{/if}}
+
+  {{#if paging.next}}
+    <a href="{{paging.next}}">Older posts ></a>
+  {{/if}}
+</nav>
