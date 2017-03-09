@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/static/mbw.css">
     <title>
         madebywill
+         - Force your Windows Phone 7.5 app to tombstone when debugging
     </title>
 </head>
 <body>
@@ -33,44 +34,12 @@
         </nav>    </div>
 
     <main>
+<p>With the new multitasking and fast app switching functionality in Windows Phone 7.5 apps are often kept in memory and no longer tombstone as they did with Windows Phone 7. As long as you build your app with the WP 7.1 SDK you get this free as a developer, it just works.</p>
+<p>However, there are times when your app may tombstone, therefore it’s still important to handle (and test) the activated and deactivated events.</p>
+<p>In order to test your tombstoning code you can force your application to be tombstoned instead of kept in memory during debugging. To do this, just open your project properties panel, click the debug tab and check <strong>Tombstone upon deactivation while debugging</strong>.</p>
+<p><img src="/media/2011/tombstone.png" alt="Image"></p>
 
-    <article class="post">
-        <a href="/2017/2/hello-world/">
-            <h2 class="post-title">Hello World!</h2>
-  
-            <div class="post-body">
-                  <p>First blog post?</p>
-  
-                <span class="post-read-more">Read more</span>
-            </div>
-        </a>
-    </article>
-    <article class="post">
-        <a href="/2011/11/don-t-be-evil-background-agents-on-windows-phone/">
-            <h2 class="post-title">Don&#x27;t be evil. Background Agents on Windows Phone</h2>
-  
-            <div class="post-body">
-                  <p>Some things to think about to ensure your background agents do the right thing for your users.</p>
-  
-                <span class="post-read-more">Read more</span>
-            </div>
-        </a>
-    </article>
-    <article class="post">
-        <a href="/2011/9/force-your-windows-phone-7-5-app-to-tombstone-when-debugging/">
-            <h2 class="post-title">Force your Windows Phone 7.5 app to tombstone when debugging</h2>
-  
-            <div class="post-body">
-                  <p>Some things to think about to ensure your background agents do the right thing for your users.</p>
-  
-                <span class="post-read-more">Read more</span>
-            </div>
-        </a>
-    </article>
-  
-  <nav class="paging">
-  
-  </nav>
+
     </main>
 
 </body>

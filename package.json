@@ -9,6 +9,6 @@
   "author": "willj",
   "license": "ISC",
   "devDependencies": {
-    "willj-noodle": "^1.0.0-alpha.2"
+    "willj-noodle": "^1.0.0-alpha.3"
   }
 }
