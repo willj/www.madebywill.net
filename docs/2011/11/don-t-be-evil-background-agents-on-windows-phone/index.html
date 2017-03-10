@@ -34,25 +34,33 @@
         </nav>    </div>
 
     <main>
-<p>Microsoft has done a lot of work to ensure background agents are useful without disrupting the user or wiping out their remaining battery power. However, it is still important for you as a developer to do the right thing and think about the user when implementing periodic agents.</p>
-<h2>Give the user control and understand their intention</h2>
-<p>Unless the background agent is critical to your application (from the users point of view, not yours) you should always give the user the choice of whether they want to use this functionality or not. Having asked the question you can now do the right thing, you know the users intention.</p>
-<p>If they said no, you know never to bother them again and not to enable a background task when they open your app.</p>
-<p>If the user said yes, you can do your best to ensure their expectations are met</p>
-<ul>
-<li>You know to renew the agent when they use your app.</li>
-<li>If the agent has lapsed (for instance the user was without their phone for more than 14 days) you know you should renew it.</li>
-<li>If you’re unable to renew it (because the user blocked your task, perhaps in an attempt to save battery life one day) you know it’s a good idea to tell the user so they can fix it.</li>
-</ul>
-<h2>Only run when you need to and do only what you need to do</h2>
-<p>Periodic tasks run every 30 minutes or so, but that doesn’t mean all of your code needs to execute that often. Think about your use case, are you fetching data? How often does it get updated? Are there times of the day it will never change?</p>
-<p>With my <a href="http://www.windowsphone.com/en-GB/apps/c8366df9-1127-e011-854c-00237de2db9e">Lovefilm</a> app, I use a background agent to check for new films/games that have shipped to the user. This isn’t likely to happen more than a couple of times a week, and the user wouldn’t want to be woken up to hear about it. Therefore I run my code only once every 90 minutes and only between the hours of 8am and midnight, at other times the background agent does nothing and exits immediately.</p>
-<p>If your agent is updating live tiles, has the user actually pinned any? Do you check this before you waste their battery downloading data?</p>
-<p>Don’t be selfish, it’s not your battery life you’re using, so don’t do things for yourself like upload analytics in the background.</p>
-<h2>Other tips</h2>
-<p>Given that periodic agents have a 14 day time limit before they expire, it’s a good idea to use the back of your tile to gently remind the user to open your app and renew the agent, but don’t be annoying!</p>
-<p>If you’re using Isolated Storage Application Settings from a background agent make sure you explicitly call the Save() method, your data won’t be saved otherwise.</p>
+<section>
+  <h1 class="post-title">Don&#x27;t be evil. Background Agents on Windows Phone</h1>
 
+  <article class="full-post-body">
+    <p>Microsoft has done a lot of work to ensure background agents are useful without disrupting the user or wiping out their remaining battery power. However, it is still important for you as a developer to do the right thing and think about the user when implementing periodic agents.</p>
+    <h2>Give the user control and understand their intention</h2>
+    <p>Unless the background agent is critical to your application (from the users point of view, not yours) you should always give the user the choice of whether they want to use this functionality or not. Having asked the question you can now do the right thing, you know the users intention.</p>
+    <p>If they said no, you know never to bother them again and not to enable a background task when they open your app.</p>
+    <p>If the user said yes, you can do your best to ensure their expectations are met</p>
+    <ul>
+    <li>You know to renew the agent when they use your app.</li>
+    <li>If the agent has lapsed (for instance the user was without their phone for more than 14 days) you know you should renew it.</li>
+    <li>If you’re unable to renew it (because the user blocked your task, perhaps in an attempt to save battery life one day) you know it’s a good idea to tell the user so they can fix it.</li>
+    </ul>
+    <h2>Only run when you need to and do only what you need to do</h2>
+    <p>Periodic tasks run every 30 minutes or so, but that doesn’t mean all of your code needs to execute that often. Think about your use case, are you fetching data? How often does it get updated? Are there times of the day it will never change?</p>
+    <p>With my <a href="http://www.windowsphone.com/en-GB/apps/c8366df9-1127-e011-854c-00237de2db9e">Lovefilm</a> app, I use a background agent to check for new films/games that have shipped to the user. This isn’t likely to happen more than a couple of times a week, and the user wouldn’t want to be woken up to hear about it. Therefore I run my code only once every 90 minutes and only between the hours of 8am and midnight, at other times the background agent does nothing and exits immediately.</p>
+    <p>If your agent is updating live tiles, has the user actually pinned any? Do you check this before you waste their battery downloading data?</p>
+    <p>Don’t be selfish, it’s not your battery life you’re using, so don’t do things for yourself like upload analytics in the background.</p>
+    <h2>Other tips</h2>
+    <p>Given that periodic agents have a 14 day time limit before they expire, it’s a good idea to use the back of your tile to gently remind the user to open your app and renew the agent, but don’t be annoying!</p>
+    <p>If you’re using Isolated Storage Application Settings from a background agent make sure you explicitly call the Save() method, your data won’t be saved otherwise.</p>
+  </article>
+  <div class="post-footer">
+    <span class="post-date">2011/11/27</span>
+  </div>
+</section>
 
     </main>
 
